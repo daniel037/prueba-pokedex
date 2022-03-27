@@ -6,15 +6,9 @@ lista_tipos = {}
 
 def main():
     data_raichu = get_pokemon_data_raichu(url_api_raichu)
-
- 
     data_pokemons = get_pokemon_data(url_api)
-    #print('pok  ', data_pokemons)
-
     comparacion = get_resultado(data_raichu, data_pokemons)
-
-    print('comparacion: ', comparacion)
-
+    print(comparacion)
 
 
 def get_resultado(data_raichu, data_pokemons):
@@ -26,12 +20,8 @@ def get_resultado(data_raichu, data_pokemons):
                 cc = cc + 1
             if cc > 0:
                 contador = contador + 1    
-            
     return contador
 
-  
-
- 
 def get_pokemon_data(url):
     lista_items_pokemon = []
     respuesta_lista_pokemon = (requests.get(url)).json()
