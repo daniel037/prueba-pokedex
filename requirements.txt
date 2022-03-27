@@ -1,0 +1,2 @@
+se utilizo python 3.9.6
+y se importo modulo de requests
